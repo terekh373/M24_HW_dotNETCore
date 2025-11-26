@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Frontend</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="bg-light">
+
+    <header class="header bg-primary text-white py-3 mb-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link text-white fw-bold">Main</a></li>
+            </ul>
+            <a href="./html/order.html" class="btn btn-outline-light">Кошик</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div id="user_profile" class="col-12 mb-4"></div>
+
+            <div id="box_register" class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Register</h2>
+                        <div class="mb-3">
+                            <input id="username_register_id" type="email" class="form-control" placeholder="email">
+                        </div>
+                        <div class="mb-3">
+                            <input id="password_register_id" type="password" class="form-control" placeholder="password">
+                        </div>
+                        <button onclick="register()" id="btn_register" class="btn btn-success w-100">register</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="box_login" class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Login</h2>
+                        <div class="mb-3">
+                            <input id="emailId" type="email" class="form-control" placeholder="email">
+                        </div>
+                        <div class="mb-3">
+                            <input id="passwordId" type="password" class="form-control" placeholder="password">
+                        </div>
+                        <button onclick="login()" id="btn_login" class="btn btn-primary w-100">login</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box_profile col-lg-4 col-md-6 mb-4 d-none">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="mb-2"><strong id="user_email"></strong></p>
+                        <button onclick="logout()" id="btn_logout" class="btn btn-danger w-100">logout</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box_user_results col-12 mb-5">
+                <pre id="output" class="bg-dark text-white p-3 rounded"></pre>
+            </div>
+        </div>
+
+        <h1 class="h2 mb-4 text-center">Products</h1>
+        <div id="product_list" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/user.js"></script>
+    <script src="./js/products.js"></script>
+</body>
+</html>
